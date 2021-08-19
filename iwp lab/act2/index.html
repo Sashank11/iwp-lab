@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="utf-8">
+            <title>Course Registration Form</title>
+        </head>
+        <body>
+            <p>
+                <fieldset> 
+            <legend><h1>Registration Form</h1> </legend>
+            <div class="form">
+            <form action="1.html" target="_self" method="get" enctype="multipart/form-data">
+            </div>
+            <div>
+                <label for="fname">First Name:</label>
+                <input type="text" name="fname" placeholder="First name" id="fname" >
+                <label for="lname">Last Name:</label>
+                <input type="text" name="lname" placeholder="Last name" id="lname"><br><br>
+                </div>
+            
+            <div>
+                <label for="date">Date of Birth:</label>
+                <input type="date" name="dob" id="date" value="date"><br><br>
+            </div>
+            <div>
+                <label for="gender">Gender:</label>
+                <input type="radio" name="gender" id="male" value="male"> 
+                <label for="male">Male</label>
+                <input type="radio" name="gender" id="female" value="female">
+                <label for="female">Female</label>
+                <input type="radio" name="gender" id="others" value="others">
+                <label for="others">Others</label>
+                <br><br>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" ><br><br>
+            </div>
+            <div>
+                <label for="contact">Contact:</label>
+                <input type="tel" name="phone" id="contact" ><br><br>
+            </div>
+            <div class="checks">
+                <label for="degree">Degree:</label>
+                <input type="radio" name="degree" id="pursuing" value="pursuing">
+                <label for="pursuing">Pursuing</label>
+                <input type="radio" name="degree" id="completed" value="cpmpleted">
+                <label for="completed">Completed</label>
+                <br><br>
+            </div>
+            <div>
+            <label for="subject">Subject:</label>
+                <select name="subject" id="subject" required>
+                    <option value="None"></option>
+                    <option value="Computer Science And Engineering">Computer Science And Engineering</option>
+                    <option value="Civil Engineering">Civil Engineering</option>
+                    <option value="Mechanical Engineering">Mechanical Engineering</option>
+                    <option value="Biotechnology">Biotechnology</option>
+                </select>
+                <br><br>
+            </div>
+            <div class="checks">
+                <label for="identity"> Student ID:  </label>
+                <input type="file" id="identity" value="identity" accept="image/*"> 
+                <br> <br>
+            </div>
+            <div class="Feedback">
+            <label > Your Feedback :</label> <br>   
+            <textarea name="Your Feedback" rows="3" cols="20"> </textarea>
+            </div>
+             <br>
+            <div class="checks">
+                    <input type="checkbox" value="agree" id="terms" required>
+                    <label for="terms"> <i>I agree to the terms and conditions</i></label><br>
+            </div>
+            <br>
+            <div>
+                <button type="submit" > Submit </button>
+                <button type="reset" > Reset  </button>
+            </div>
+            </form>
+        </p>
+    </fieldset>
+        </body>
+    </html>
