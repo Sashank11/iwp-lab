@@ -1,0 +1,76 @@
+@font-face {
+    font-family: del;
+    src: url('Delicious-BoldItalic.otf');
+}
+
+
+
+form{
+border-radius: 25px;
+border: 2px solid #54880c;
+padding: 6px;
+width: 540px;
+height: 520px;
+position: center;
+margin-top: 10%;
+margin-left: 20%;
+background-color:rgb(169, 215, 238) ;
+font-family: del;
+
+}
+
+h2{
+    text-align: left;
+    margin-left: 9.063rem;
+    font-family: del;
+}
+label{
+display: inline-block;
+width: 200px;
+text-align: right;
+border: 8px solid;
+border-width: 2px;
+border-color: green;
+background-color:rgb(169, 215, 238) ;
+font-family: del;
+}
+
+body {
+    margin-left: 340px;
+    margin-top: 30px;
+    text-align: center;
+    font-family: del;
+}
+
+
+button{
+    background-color: darkgreen;
+    width: 300px;
+    height: 35px;
+    color: white;
+    font-family: del;
+
+}
+#gender{
+    width: 11rem;
+}
+
+#date{
+    width:11rem;
+}
+
+#slot{
+        width:11rem;
+}   
+
+.fld{
+    width: 18.75rem;
+}
+
+.slot{
+    width: 19rem;
+}
+
+.gen{
+    width:19rem;
+}
