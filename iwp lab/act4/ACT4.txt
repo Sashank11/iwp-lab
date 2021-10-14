@@ -1,0 +1,138 @@
+                       HTML CODE
+ 
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="activity4.css">
+</head>
+<body>
+
+<div>
+	<form action="#" onsubmit="return validation()"> 
+	
+	<label for="login">Login </label>
+	<input type="text" name="login" id="login">
+	<span id="loginerror"></span><br><br>
+
+
+	<label for="pwd">Password </label>
+	<input type="password" name="pwd" id="pwd">
+	<span id="pwderror"></span><br><br>
+
+	<label for="confirmpwd">Confirm Password </label>
+	<input type="password" name="confirmpwd" id="confirmpwd">
+	<span id="confirmpwderror"></span><br><br>
+
+
+	<label for="gender">Gender</label>
+    <select name="gender" id="gender">
+        <option>Male</option>
+        <option>Female</option>
+    </select><br><br>
+
+
+	<label for="email">Email </label>
+	<input type="email" name="email" id="email">
+	<span id="emailerror"></span><br><br>
+
+    <button type="submit" class="register">Register</button>
+
+	<script>
+
+	function validation(){
+		
+		var login = document.getElementById('login').value;
+		var pwd = document.getElementById('pwd').value;
+		var confirmpwd = document.getElementById('confirmpwd').value;
+		var email = document.getElementById('email').value;
+
+		var logincheck = /.{8,}/
+		var passwordcheck = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{16}$/
+		var emailcheck = /[@]{1,}/
+
+		if(logincheck.test(login)){
+			document.getElementById("loginerror").innerHTML=" ";
+		}else{
+			document.getElementById("loginerror").innerHTML= "Minimum 8 characters should be there";
+			return false;
+		}
+		if(passwordcheck.test(pwd)){
+			document.getElementById("pwderror").innerHTML="Strong";
+		}else{
+			document.getElementById("pwderror").innerHTML= "Password must be of 16 charcters including min 1 small character,min 1 capital character and min 1 digit ";
+			return false;
+		}
+
+		if (pwd.match(confirmpwd)){
+			document.getElementById("confirmpwderror").innerHTML="";
+		}else{
+			document.getElementById("confirmpwderror").innerHTML="Passwords are not the same";
+			return false;
+		}
+
+		if(emailcheck.test(email)){
+			document.getElementById("emailerror").innerHTML="";
+		}else{
+			document.getElementById("emailerror").innerHTML= "Mail is wrong";
+			return false;
+		}
+
+    }
+</script>
+</form>
+</div>
+</body>
+</html>
+
+
+                CSS FILE
+
+
+div {
+    background-color: rgb(87, 88, 88);
+    width: 600px;
+    height: 350px;
+    padding: 25px;
+    border: 25px solid rgb(9, 9, 19);
+    margin-left: 400px;
+    margin-top: 100px;
+    font-size: large;
+    color: white;
+  }
+
+  label{
+    display: inline-block;
+    width: 200px; 
+    margin-top: 5px;
+    margin-bottom: 10px;
+    text-align: left; 
+    font-weight: bold;
+    padding: 2px;
+}
+
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  select{
+      width: 220px;
+      margin-right: 150px;
+      margin-bottom: 5px;
+      margin-top: 5px;
+      padding: 5px;
+      font-weight: bold;
+      font-size: 15px;
+      float:right;
+      background-color:  rgb(170, 238, 138);
+  }
+
+  select{
+    width: 231px;
+
+  }
+
+  
+
+ button{
+     width: 100px;
+     padding: 8px;
+ }

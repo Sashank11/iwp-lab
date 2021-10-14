@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+	<form action="#" onsubmit="return validation()"> 
+
+	<label for="login">Login </label>
+	<input type="text" name="login" id="login">
+
+	<label for="pwd">Password </label>
+	<input type="password" name="pwd" id="pwd">
+	
+	<label for="confirmpwd">Confirm Password </label>
+	<input type="password" name="confirmpwd" id="confirmpwd">
+	<span id="pwdright"></span><br>
+
+
+	<label for="gender">Gender</label>
+    <select name="gender" id="gender">
+        <option>Male</option>
+        <option>Female</option>
+    </select><br>
+
+	<label for="email">Email </label>
+	<input type="email" name="email" id="email">
+	<br>
+
+	<label for="upload">Upload </label>
+	<input type="file" name="file" id="file">
+	<br>
+
+    <button type="submit" class="register">Register</button>
+	<p id="nr1"> </p>
+	<p id= "nr2"> </p>
+	
+	
+	<script>
+
+	function validation(){
+		
+		var login = document.getElementById("login").value;
+		var pwd = document.getElementById("pwd").value;
+		var confirmpwd = document.getElementById("confirmpwd").value;
+		var ehk = document.getElementById("email").value;
+
+		var logincheck = /.{8,}/;
+		var passwordcheck = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{16}$/;
+		var emailcheck = /[@]{1,}/;
+
+		if(logincheck.test(login)){
+			document.getElementById("nr1").innerHTML=" ";
+		}else{
+			alert("Invalid login");
+			document.getElementById("nr1").innerHTML= "Minimum 8 characters required";
+			return false;
+		}
+		if(passwordcheck.test(pwd)){
+			document.getElementById("pwdright").innerHTML="Strong";
+		}else{
+			alert("Invalid password format");
+			document.getElementById("pwdright").innerHTML= "Weak ";
+			return false;
+		}
+
+		if (pwd.match(confirmpwd)){
+			document.getElementById("nr1").innerHTML="";
+		}else{
+			alert("password do not match");
+			document.getElementById("nr1").innerHTML="Passwords do not match";
+			return false;
+		}
+
+		if(emailcheck.test(ehk)){
+			document.getElementById("nr2").innerHTML="";
+		}else{
+			alert("Invalid email format");
+			document.getElementById("nr2").innerHTML= "Mail format is not valid";
+			return false;
+		}
+
+    }
+</script>
+</form>
+</div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+.container {
+    position: absolute;
+    background-color: rgb(87, 88, 88);
+    width: 600px;
+    height: 400px;
+    padding: 20px;
+    border: 25px solid #000;
+    margin-left: 400px;
+    margin-top: 100px;
+    font-size: large;
+    color: white;
+}
+
+label{
+    display: inline-block;
+    width: 200px; 
+    margin: 12px;
+    text-align: left; 
+    font-weight: bold;
+    padding: 2px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+select{
+    width: 218px;
+    margin-right: 120px;
+    margin-bottom: 4px;
+    margin-top: 4px;
+    padding: 4px;
+    font-weight: bold;
+    font-size: 14px;
+    float:right;
+    background-color:  rgb(170, 238, 138);
+}
+
+select{
+    width: 231px;
+
+}
+
+
+
+button{
+    width: 100px;
+    padding: 8px;
+}
+
+#gender{
+    width: 14.2rem;
+}
+
+#pwdright{
+    margin-left: 500px;
+    
+}
+
+span{   
+
+}
